@@ -147,6 +147,29 @@
 
 
 @media (max-width:575px){
+    figure.effect-bubba h2, figure.effect-bubba p {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    figure.effect-bubba img {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    figure.effect-bubba figcaption::before, figure.effect-bubba figcaption::after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    figure.effect-bubba:hover figcaption::before, figure.effect-bubba:hover figcaption::after {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    figure.effect-bubba img {
+        opacity: 0.4;
+        transform: scale(1);
+    }
     .background-imgs{
         padding: 20px;
     }
@@ -203,7 +226,7 @@
     }
     .btn-branch a{
         margin-right: 0px;
-        font-size: 10px;
+        font-size: 12px;
     }
     .branch-box h4{
         font-size: 24px;
@@ -247,6 +270,29 @@
 
 
 @media (min-width:576px) and (max-width:767px){
+    figure.effect-bubba h2, figure.effect-bubba p {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    figure.effect-bubba img {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    figure.effect-bubba figcaption::before, figure.effect-bubba figcaption::after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    figure.effect-bubba:hover figcaption::before, figure.effect-bubba:hover figcaption::after {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    figure.effect-bubba img {
+        opacity: 0.4;
+        transform: scale(1);
+    }
     .background-imgs{
         padding: 20px;
     }
