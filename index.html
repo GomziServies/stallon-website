@@ -206,7 +206,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="about-img text-center">
-                            <img src="./images/branch/aboutus-img.jpeg" style="border-radius: 10px;"
+                            <img src="./images/branch/aboutus-img.jpg" style="border-radius: 10px;"
                                 class="img-fluid wow animate__animated animate__fadeInLeft" alt="about">
                         </div>
                     </div>
@@ -214,16 +214,19 @@
                         <div class="about-caption wow animate__animated animate__fadeInRight">
                             <div class="section-tittle">
                                 <span class="d-none d-md-block">ABOUT US</span>
-                                <h2>How we start Stallon Gym</h2>
+                                <h2>Stallon Gym: Fitness Redefined</h2>
                             </div>
-                            <p class="pera-top mb-md-4">Brook presents your services with flexible, convenient and
-                                cdpose
-                                layouts. You can select your favorite layouts &amp; elements for cular ts with
-                                unlimited ustomization possibilities. Pixel-perfect replication of the designers is
-                                intended. layouts elements for cular ts with
-                                unlimited ustomization possibilities. Pixel-perfect replication of the designers is
-                                intended.</p>
-                            <a class="btn about-btn">Join As Team</a>
+                            <p class="pera-top mb-md-4 text-left">
+                                Owned by Mr.Percy surty and Mrs.Kashmira Surty, our fitness center established in 1995 has branches in Vesu, Ghod-dod,
+                                Althan, Adajan, Varacha, and Navsari, offering all types of fitness products & services
+                                under one roof. Our tagline "A GOOD COACH CAN CHANGE YOUR BODY, A GREAT COACH CAN CHANGE
+                                YOUR LIFE" reflects our commitment to a holistic approach towards fitness. We strive to
+                                be India's best health hub,  <span id="dots">...</span>
+                                <span id="more" style="display: none;"> providing exceptional and innovative programs and services that result in measurable and
+                                    transformational changes in the lives of our members. Join us on our journey towards
+                                    a fitter and healthier India.</span>
+                            </p>
+                            <a onclick="Aboutus()" id="mybutton" class="btn about-btn">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -234,7 +237,7 @@
         <div class="container-fluid">
             <div class="container">
                 <div class="col-md-12 text-center title-heading">
-                    <h2>We offer Something For <span>Everybody</span></h2>
+                    <h2>Our <span>Amenities</span></h2>
                     <div>
                         <img src="./images/common/gym-line.png" class="img-fluid" width="200px" alt="">
                     </div>
@@ -345,7 +348,7 @@
                                         <img src="./images/team-member/weight-gain.webp" style="border-radius: 10px;"
                                             alt="Weight Gain">
                                         <div class="text-center review-content">
-                                            <h4>Weight Gain</h4>
+                                            <h4>Weight Gain Programme</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -354,7 +357,7 @@
                                         <img src="./images/team-member/weight-loss.webp" style="border-radius: 10px;"
                                             alt="Weight Loss">
                                         <div class="text-center review-content">
-                                            <h4>Weight Loss</h4>
+                                            <h4>Weight Loss Programme</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -363,7 +366,7 @@
                                         <img src="./images/team-member/cardio-workout.webp" style="border-radius: 10px;"
                                             alt="Cardio Exercise">
                                         <div class="text-center review-content">
-                                            <h4>Cardio Exercise</h4>
+                                            <h4>Cardio Workout</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -688,8 +691,8 @@
                         </div>
                     </div>
                     <div class="text-center mt-5">
-                        <h4 class="d-none d-md-block" style="font-size: 36px; font-weight: 600;">Picture</h4>
-                        <h4 class="d-block d-md-none" style="font-size: 24px; font-weight: 600;">Picture</h4>
+                        <h4 class="d-none d-md-block" style="font-size: 36px; font-weight: 600;">Gallery</h4>
+                        <h4 class="d-block d-md-none" style="font-size: 24px; font-weight: 600;">Gallery</h4>
                         <div>
                             <img src="./images/common/gym-line.png" class="img-fluid" width="120px" alt="">
                         </div>
@@ -1540,7 +1543,7 @@
         <div class="container-fluid">
             <div class="container py-md-5">
                 <div class="col-md-12 text-center title-heading">
-                    <h2>What's Our <span>Client Says</span></h2>
+                    <h2><span>Testimonials</span></h2>
                     <div class="">
                         <img src="./images/common/gym-line.png" class="img-fluid" width="200px" alt="">
                     </div>
@@ -1984,6 +1987,23 @@
         new WOW().init();
     </script>
 
+    <script>
+        function Aboutus() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("mybutton");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read More";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
     <script>
         $(document).ready(function () {
             $(".bl-1").click(function () {
