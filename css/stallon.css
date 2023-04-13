@@ -1484,3 +1484,52 @@ figure.effect-bubba:hover p {
   }
 
   /* avadh css end  */
+
+  /* blog css  */
+  .blog-heading{
+    margin-top: 90px;
+  }
+
+  .blog-heading h1{
+    font-size: 36px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    line-height: 50px;
+  }
+
+  .blog-style p{
+    color: #ddd;
+    margin-top: 15px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  .blog-style h2{
+    font-weight: 700;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+  }
+
+  .blog-style h4{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+  }
+
+  .blog-side{
+    background-color: #303030;
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .blog-side h4{
+    font-weight: 700;
+  }
+
+  .blog-side a{
+    font-size: 16px;
+    color: #fff;
+  }

@@ -500,3 +500,17 @@
         margin-top: 25px;
     }
 }
+
+
+@media (max-width:575px){
+    .blog-heading h1 {
+        font-size: 27px;
+        line-height: 36px;
+    }
+    .blog-style p{
+        font-size: 14px;
+    }
+    .blog-style h2{
+        font-size: 20px;
+    }
+}
