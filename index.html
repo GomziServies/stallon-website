@@ -53,7 +53,7 @@
 
     <script>
         $(document).ready(function () {
-            $("#owl-demo, #owl-demo-1, #owl-demo-2, #owl-demo-3, #owl-demo-4, #owl-demo-5").owlCarousel({
+            $("#owl-demo, #owl-demo-1, #owl-demo-2, #owl-demo-3, #owl-demo-4, #owl-demo-5, #owl-demo-team").owlCarousel({
                 autoPlay: 5000, //Set AutoPlay to 5 seconds
                 nav: true,
                 loop: true,
@@ -73,6 +73,16 @@
                 dots: false,
             });
             $("#owl-demo-8, #owl-demo-9").owlCarousel({
+                autoPlay: 3000, //Set AutoPlay to 5 seconds
+                nav: true,
+                loop: true,
+                items: 1,
+                margin: 10,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [576, 1],
+                dots: false,
+            });
+            $("#owl-demo-team-1").owlCarousel({
                 autoPlay: 3000, //Set AutoPlay to 5 seconds
                 nav: true,
                 loop: true,
@@ -1444,12 +1454,12 @@
             <div class="container py-5">
                 <div class="text-center mt-5">
                     <h4 class="d-none d-md-block" style="font-size: 36px; font-weight: 600;">Team Members</h4>
-                    <h4 class="d-block d-md-none" style="font-size: 24px; font-weight: 600;">Picture</h4>
+                    <h4 class="d-block d-md-none" style="font-size: 24px; font-weight: 600;">Team Members</h4>
                     <div>
                         <img src="./images/common/gym-line.png" class="img-fluid mb-3" width="120px" alt="">
                     </div>
                     <div class="d-none d-md-block">
-                        <div id="owl-demo-4"
+                        <div id="owl-demo-team"
                             class="owl-carousel owl-theme mt-md-4wow animate__animated animate__fadeIn">
                             <div class="item mx-3">
                                 <a href="./team/phulchandra-singh.html">
@@ -1465,6 +1475,77 @@
                                 </a>
                             </div>
                             <div class="item mx-3">
+                                <a href="./team/khudabux-bacha.html">
+                                    <div class="review-box">
+                                        <img src="./images/team-member/team-member-2.webp" style="border-radius: 10px;"
+                                            alt="Team Members">
+                                    </div>
+                                    <div class="mkdf-team-info mt-4">
+                                        <h4 class="mkdf-team-name" style="color: #ffffff">Khudabux Bacha</h4>
+                                        <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
+                                                style="color: #33cd18;">- Ghod Dod Road Branch</span></h6>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item mx-3">
+                                <a href="./team/parmar-kaushik.html">
+                                    <div class="review-box">
+                                        <img src="./images/team-member/team-member-3.webp" style="border-radius: 10px;"
+                                            alt="Certificate">
+                                    </div>
+                                    <div class="mkdf-team-info mt-4">
+                                        <h4 class="mkdf-team-name" style="color: #ffffff">Kaushik Parmar </h4>
+                                        <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager<span
+                                                style="color: #33cd18;"> - Stallon Gym Mota Varachha </span></h6>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item mx-3">
+                                <a href="./team/pavan-rana.html">
+                                    <div class="review-box">
+                                        <img src="./images/team-member/team-member-5.webp" style="border-radius: 10px;"
+                                            alt="Certificate">
+                                    </div>
+                                    <div class="mkdf-team-info mt-4">
+                                        <h4 class="mkdf-team-name" style="color: #ffffff">Pavan Rana </h4>
+                                        <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
+                                                style="color: #33cd18;"> - Stallon Gym Adajan Branch </span></h6>
+                                    </div>
+                                    </a>
+                            </div>
+                            <div class="item mx-3">
+                                <a href="/team/tapan-mose.html">
+                                <div class="review-box">
+                                    <img src="./images/team-member/team-member-4.webp" style="border-radius: 10px;"
+                                        alt="Certificate">
+                                </div>
+                                <div class="mkdf-team-info mt-4">
+                                    <h4 class="mkdf-team-name" style="color: #ffffff">Khudabux Bacha</h4>
+                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Stallon Gym vesu Branch  <span
+                                            style="color: #33cd18;">- Manager</span></h6>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-md-none d-block">
+                        <div id="owl-demo-team-1"
+                        class="owl-carousel owl-theme mt-md-4wow animate__animated animate__fadeIn">
+                        <div class="item mx-3">
+                            <a href="./team/phulchandra-singh.html">
+                                <div class="review-box">
+                                    <img src="./images/team-member/team-member-1.webp" style="border-radius: 10px;"
+                                        alt="Equipment">
+                                </div>
+                                <div class="mkdf-team-info mt-4">
+                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
+                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
+                                            style="color: #33cd18;">- Stallon VIP Branch</span></h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item mx-3">
+                            <a href="/team/khudabux-bacha.html">
                                 <div class="review-box">
                                     <img src="./images/team-member/team-member-2.webp" style="border-radius: 10px;"
                                         alt="Team Members">
@@ -1474,103 +1555,48 @@
                                     <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
                                             style="color: #33cd18;">- Ghod Dod Road Branch</span></h6>
                                 </div>
-                            </div>
-                            <div class="item mx-3">
+                            </a>
+                        </div>
+                        <div class="item mx-3">
+                            <a href="./team/parmar-kaushik.html">
                                 <div class="review-box">
                                     <img src="./images/team-member/team-member-3.webp" style="border-radius: 10px;"
                                         alt="Certificate">
                                 </div>
                                 <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;">- Stallon VIP Branch</span></h6>
-                                </div>
-                            </div>
-                            <div class="item mx-3">
-                                <div class="review-box">
-                                    <img src="./images/team-member/44.jpg" style="border-radius: 10px;"
-                                        alt="Certificate">
-                                </div>
-                                <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;"> ( Stallon VIP Branch )</span></h6>
-                                </div>
-                            </div>
-                            <div class="item mx-3">
-                                <div class="review-box">
-                                    <img src="./images/team-member/22.jpg" style="border-radius: 10px;"
-                                        alt="Certificate">
-                                </div>
-                                <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Khudabux Bacha</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;"> ( Ghod Dod Road Branch )</span></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-md-none d-block">
-                        <div id="owl-demo-4"
-                            class="owl-carousel owl-theme mt-md-4wow animate__animated animate__fadeIn">
-                            <a href="./team/phulchandra-singh.html">
-                                <div class="item mx-3">
-                                    <div class="review-box">
-                                        <img src="./images/team-member/team-member-1.webp" style="border-radius: 10px;"
-                                            alt="Equipment">
-                                    </div>
-                                    <div class="mkdf-team-info mt-4">
-                                        <h4 class="mkdf-team-name" style="color: #ffffff">Khudabux Bacha</h4>
-                                        <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                                style="color: #33cd18;"> ( Stallon VIP Branch )</span></h6>
-                                    </div>
+                                    <h4 class="mkdf-team-name" style="color: #ffffff">Kaushik Parmar </h4>
+                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager<span
+                                            style="color: #33cd18;"> - Stallon Gym Mota Varachha </span></h6>
                                 </div>
                             </a>
-                            <div class="item mx-3">
-                                <div class="review-box">
-                                    <img src="./images/team-member/22.jpg" style="border-radius: 10px;"
-                                        alt="Certificate">
-                                </div>
-                                <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;"> ( Stallon VIP Branch )</span></h6>
-                                </div>
-                            </div>
-                            <div class="item mx-3">
-                                <div class="review-box">
-                                    <img src="./images/team-member/33.jpg" style="border-radius: 10px;"
-                                        alt="Certificate">
-                                </div>
-                                <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;"> ( Stallon VIP Branch )</span></h6>
-                                </div>
-                            </div>
-                            <div class="item mx-3">
-                                <div class="review-box">
-                                    <img src="./images/team-member/44.jpg" style="border-radius: 10px;"
-                                        alt="Certificate">
-                                </div>
-                                <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;"> ( Stallon VIP Branch )</span></h6>
-                                </div>
-                            </div>
-                            <div class="item mx-3">
-                                <div class="review-box">
-                                    <img src="./images/team-member/22.jpg" style="border-radius: 10px;"
-                                        alt="Certificate">
-                                </div>
-                                <div class="mkdf-team-info mt-4">
-                                    <h4 class="mkdf-team-name" style="color: #ffffff">Phulchandra Singh</h4>
-                                    <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
-                                            style="color: #33cd18;"> ( Stallon VIP Branch )</span></h6>
-                                </div>
-                            </div>
                         </div>
+                        <div class="item mx-3">
+                            <a href="./team/pavan-rana.html">
+                            <div class="review-box">
+                                <img src="./images/team-member/team-member-5.webp" style="border-radius: 10px;"
+                                    alt="Certificate">
+                            </div>
+                            <div class="mkdf-team-info mt-4">
+                                <h4 class="mkdf-team-name" style="color: #ffffff">Pavan Rana </h4>
+                                <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Branch Manager <span
+                                        style="color: #33cd18;"> - Stallon Gym Adajan Branch </span></h6>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="item mx-3">
+                            <a href="/team/tapan-mose.html">
+                            <div class="review-box">
+                                <img src="./images/team-member/team-member-4.webp" style="border-radius: 10px;"
+                                    alt="Certificate">
+                            </div>
+                            <div class="mkdf-team-info mt-4">
+                                <h4 class="mkdf-team-name" style="color: #ffffff">Khudabux Bacha</h4>
+                                <h6 class="mkdf-team-position mt-3" style="color: #ffffff">Stallon Gym vesu Branch  <span
+                                        style="color: #33cd18;">- Manager</span></h6>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

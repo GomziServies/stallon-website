@@ -1235,7 +1235,11 @@ figure.effect-bubba:hover p {
 #owl-demo-8 .owl-prev,
 #owl-demo-8 .owl-next,
 #owl-demo-9 .owl-prev,
-#owl-demo-9 .owl-next {
+#owl-demo-9 .owl-next,
+#owl-demo-team .owl-prev,
+#owl-demo-team .owl-next,
+#owl-demo-team-1 .owl-prev,
+#owl-demo-team-1 .owl-next {
     font-size: 18px;
     color: #000;
     position: absolute;
@@ -1253,7 +1257,9 @@ figure.effect-bubba:hover p {
 #owl-demo-4 .owl-next,
 #owl-demo-5 .owl-next,
 #owl-demo-8 .owl-next,
-#owl-demo-9 .owl-next {
+#owl-demo-9 .owl-next,
+#owl-demo-team .owl-next,
+#owl-demo-team-1 .owl-next {
     left: 51%;
 }
 
@@ -1264,8 +1270,14 @@ figure.effect-bubba:hover p {
 #owl-demo-4 .owl-prev,
 #owl-demo-5 .owl-prev,
 #owl-demo-8 .owl-prev,
-#owl-demo-9 .owl-prev {
+#owl-demo-9 .owl-prev,
+#owl-demo-team .owl-prev,
+#owl-demo-team-1 .owl-prev {
     left: 46%;
+}
+
+#owl-demo-team-1 .owl-prev {
+    left: 37%;
 }
 
 .google-review {
@@ -1550,6 +1562,7 @@ figure.effect-bubba:hover p {
 
 .member p {
     font-size: 20px !important;
+    font-weight: 900 !important;
 }
 
 
@@ -1586,6 +1599,5 @@ figure.effect-bubba:hover p {
   
   .services-text {
     margin: auto;
-    width: 124px;
     text-align: center;
   }
