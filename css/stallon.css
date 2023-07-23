@@ -1239,7 +1239,11 @@ figure.effect-bubba:hover p {
 #owl-demo-team .owl-prev,
 #owl-demo-team .owl-next,
 #owl-demo-team-1 .owl-prev,
-#owl-demo-team-1 .owl-next {
+#owl-demo-team-1 .owl-next,
+#owl-testimonials-1 .owl-next,
+#owl-testimonials-1 .owl-prev,
+#owl-testimonials .owl-next,
+#owl-testimonials .owl-prev {
     font-size: 18px;
     color: #000;
     position: absolute;
@@ -1259,7 +1263,9 @@ figure.effect-bubba:hover p {
 #owl-demo-8 .owl-next,
 #owl-demo-9 .owl-next,
 #owl-demo-team .owl-next,
-#owl-demo-team-1 .owl-next {
+#owl-demo-team-1 .owl-next,
+#owl-testimonials-1 .owl-next,
+#owl-testimonials .owl-next {
     left: 51%;
 }
 
@@ -1272,11 +1278,16 @@ figure.effect-bubba:hover p {
 #owl-demo-8 .owl-prev,
 #owl-demo-9 .owl-prev,
 #owl-demo-team .owl-prev,
-#owl-demo-team-1 .owl-prev {
+#owl-demo-team-1 .owl-prev,
+#owl-testimonials-1 .owl-prev {
     left: 46%;
 }
 
 #owl-demo-team-1 .owl-prev {
+    left: 37%;
+}
+
+#owl-testimonials .owl-prev {
     left: 37%;
 }
 
@@ -1573,13 +1584,13 @@ figure.effect-bubba:hover p {
     transition: 0.4s;
     border-radius: 50%;
     border: 10px solid #bbec6c;
-  }
-  
-  .main-round img:hover {
+}
+
+.main-round img:hover {
     border: 3px solid #bbec6c;
-  }
-  
-  .small-round {
+}
+
+.small-round {
     background: #a9f8ad;
     border-radius: 50%;
     width: 60px;
@@ -1588,16 +1599,16 @@ figure.effect-bubba:hover p {
     justify-content: center;
     align-items: center;
     margin: auto;
-  }
-  
-  .services-text a {
+}
+
+.services-text a {
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     color: #ffffff !important;
-  }
-  
-  .services-text {
+}
+
+.services-text {
     margin: auto;
     text-align: center;
-  }
+}
