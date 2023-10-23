@@ -28,6 +28,7 @@
     <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="./js/owl.carousel.js"></script>
     <script type="text/javascript" src="./js/lazy-load.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
 
     <script type="text/javascript">
         function openside() {
@@ -2310,34 +2311,33 @@
                         <div class="mx-auto">
                             <h4 class="ml-3 pl-2 fw-bold contect-Question d-block d-md-none">Contact Us For More Detail
                             </h4>
-                            <h6 class="fw-bold contect-Question d-none d-md-block">Ask Any Question</h6>
+                            <h6 class="fw-bold contect-Question d-none d-md-block ml-3"> Ask Any Question</h6>
                         </div>
-                        <form class="wow animate__animated animate__fadeInRight">
+                        <form class="wow animate__animated animate__fadeInRight" id="contactForm">
                             <div>
                                 <div class="contect-input">
                                     <input type="text" class="form-control border-0 formcolor m-md-3 px-md-4 mt-3"
-                                        placeholder="Your Name">
+                                        placeholder="Your Name" id="txt_name" name="name">
                                 </div>
                                 <div class="contect-input">
                                     <input type="email" class="form-control border-0 formcolor m-md-3 px-md-4 mt-3"
-                                        placeholder="Your Email">
+                                        placeholder="Your Email" id="txt_email" name="email">
                                 </div>
                                 <div class="contect-input">
-                                    <input type="text" class="form-control border-0 formcolor m-md-3 px-md-4 mt-3"
-                                        placeholder="Subject">
+                                    <input type="number" class="form-control border-0 formcolor m-md-3 px-md-4 mt-3"
+                                        placeholder="Your Mobile" id="txt_mobile" name="mobile">
                                 </div>
                                 <div class="contect-input">
                                     <textarea class="form-control border-0 formcolor px-md-4 mt-3 m-md-3 py-md-3"
-                                        rows="4" placeholder="Message"></textarea>
+                                        rows="4" placeholder="Message" id="txt_msg" name="message"></textarea>
                                 </div>
                                 <div class="contect-input">
-                                    <button class="btn contect-btn w-100  m-md-3 mt-3 py-md-3" type="submit">Send
+                                    <button class="btn contect-btn w-100 m-md-3 mt-3 py-md-3" type="submit">Send
                                         Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -2460,11 +2460,11 @@
                                 required>
                         </div>
                         <div>
-                            <input type="number" name="number" placeholder="Number" id="number"
+                            <input type="number" name="number" placeholder="Enter Number" id="number"
                                 class="mb-3 form-control input" required>
                         </div>
                         <div>
-                            <input type="text" name "goal" placeholder="What is your fitness goal?" id="goal"
+                            <input type="text" name="goal" placeholder="What is your fitness goal?" id="goal"
                                 class="mb-3 form-control input" required>
                         </div>
                         <div class="text-center">
@@ -2480,16 +2480,105 @@
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="./js/owl.carousel.js"></script>
     <script src="./js/lazy-load.js"></script>
     <script src="./js/main.js"></script>
-
-
     <script>
-        new WOW().init();
-    </script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
 
-    <script>
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('txt_name').value;
+                const mobile = document.getElementById('txt_mobile').value;
+                const email = document.getElementById('txt_email').value;
+                const message = document.getElementById('txt_msg').value;
+
+                if (!name || !mobile || !email || !message) {
+                    Swal.fire('Error!', 'Please fill in all the required fields.', 'error');
+                    return;
+                }
+
+                // Create an object to hold the form data
+                const formData = {
+                    name: name,
+                    mobile: mobile,
+                    email: email,
+                    subject: 'Stallon',
+                    message: message
+                };
+
+                // You can replace this with your actual API endpoint for sending the form data.
+                fetch('https://admin.stallon.in/admin/inquiry', {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        console.log(response)
+                        if (response.status === 201) {
+                            Swal.fire('Success!', 'Your message has been sent successfully.', 'success');
+                            contactForm.reset(); // Clear the form
+                        } else {
+                            Swal.fire('Error!', 'Failed to send the message. Please try again later.', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        Swal.fire('Error!', 'An error occurred while sending the message.', 'error');
+                    });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('myForm2');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const number = document.getElementById('number').value;
+                const goal = document.getElementById('goal').value;
+
+                if (!name || !number || !goal) {
+                    Swal.fire('Error!', 'Please fill in all the required fields.', 'error');
+                    return;
+                }
+
+                // Create an object to hold the form data
+                const formData = {
+                    name: name,
+                    mobile: number,
+                    subject: 'offer',
+                    messages: `Fitness Goal: ${goal}`
+                };
+
+                // You can replace this with your actual API endpoint for sending the form data.
+                fetch('https://admin.stallon.in/admin/inquiry', {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.status === 201) {
+                            Swal.fire('Success!', 'Your Data submitted successfully.', 'success');
+                            form.reset();
+                            $('#myModal2').modal('hide');
+                        } else {
+                            Swal.fire('Error!', 'Failed to submit the form. Please try again later.', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        Swal.fire('Error!', 'An error occurred while submitting the form.', 'error');
+                    });
+            });
+        });
+
         function Aboutus() {
             var dots = document.getElementById("dots");
             var moreText = document.getElementById("more");
