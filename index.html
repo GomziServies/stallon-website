@@ -2431,7 +2431,7 @@
                 <div class="pricing-block">
                     <div class="btn-box">
                         <a id="RagistarNow" target="_blank" class="theme-btn btn w-100"
-                            style="border-radius: 0; font-size: 20px; background-color: #2bd40f;">Ragister now</a>
+                            style="border-radius: 0; font-size: 20px; background-color: #2bd40f;">Register now</a>
                     </div>
                 </div>
             </div>
@@ -2566,9 +2566,32 @@
                 })
                     .then(response => {
                         if (response.status === 201) {
-                            Swal.fire('Success!', 'Your Data submitted successfully.', 'success');
-                            form.reset();
-                            $('#myModal2').modal('hide');
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Thank you for submitting!',
+                                showCancelButton: true,
+                                showConfirmButton: true,
+                                confirmButtonText: 'Download Coupon',
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    // Add code to handle the PDF download here
+                                    // You can create a Blob and simulate a download link for the image
+                                    fetch('/images/common/coupon.pdf') // Replace with the actual URL of the image
+                                        .then(response => response.blob())
+                                        .then(blob => {
+                                            const url = window.URL.createObjectURL(blob);
+                                            const a = document.createElement('a');
+                                            a.style.display = 'none';
+                                            a.href = url;
+                                            a.download = 'coupon.pdf'; // Specify the desired filename
+                                            document.body.appendChild(a);
+                                            a.click();
+                                            window.URL.revokeObjectURL(url);
+                                        });
+                                }
+                                form.reset();
+                                $('#myModal2').modal('hide');
+                            });
                         } else {
                             Swal.fire('Error!', 'Failed to submit the form. Please try again later.', 'error');
                         }
