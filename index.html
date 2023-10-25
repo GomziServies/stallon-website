@@ -38,6 +38,25 @@
         function sideclose() {
             document.getElementById('demo').style.width = '0px';
         }
+
+        $(function () {
+            // Scroll event
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+                if (scrolled > 100) {
+                    $('.floting-btn, .floting-w-btn').fadeIn('slow');
+                }
+                if (scrolled < 100) {
+                    $('.floting-btn, .floting-w-btn').fadeOut('slow');
+                }
+            });
+
+            // Click event
+            $('.floting-btn, .floting-w-btn').click(function () {
+                $("html, body").animate({ scrollTop: "0" }, 100);
+            });
+        });
+
     </script>
     <script type="text/javascript">
         /*---------------------Drop down----------------------*/
@@ -2431,7 +2450,7 @@
                 <div class="pricing-block">
                     <div class="btn-box">
                         <a id="RagistarNow" target="_blank" class="theme-btn btn w-100"
-                            style="border-radius: 0; font-size: 20px; background-color: #2bd40f;">Register now</a>
+                            style="border-radius: 0; font-size: 20px; background-color: #2bd40f;">Book now</a>
                     </div>
                 </div>
             </div>
@@ -2475,8 +2494,13 @@
             </div>
         </div>
     </div>
-    <div id="div_modal"></div>
-
+    <div class="floting-btn">
+        <div class="col-md-12 px-0 text-center">
+            <a href="javascript:void(0);" onclick="opneform()" style="border: 3px solid #44ef00; color: #44ef00;"
+                class="btn w-100">
+                Get 2 Year Membership in ₹13,000/-</a>
+        </div>
+    </div>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
@@ -2711,6 +2735,9 @@
             $('#myModal').modal();
         }
 
+        function opneform() {
+            $('#myModal').modal();
+        }
         timeoutID = setTimeout(showModal, 10000);
 
         $('#RagistarNow').on('click', function (e) {
